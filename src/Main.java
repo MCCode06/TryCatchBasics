@@ -23,8 +23,17 @@ public class Main {
             Rekurs.recursive();
         }
         catch (StackOverflowError e) {
-            System.out.println("Altini qoymusan: " + e.getClass().getSimpleName());
+            System.out.println("Altini qoymusan ee: " + e.getClass().getSimpleName());
         }
+
+
+        try {
+            int[] memoryKiller = new int[100_000 * 100_000];
+        }
+        catch (OutOfMemoryError e) {
+            System.out.println("Yaddas qoymadin ee? Gele error: " + e.getClass().getSimpleName());
+        }
+
 
     }
 }
